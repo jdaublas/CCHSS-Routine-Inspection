@@ -1,0 +1,7 @@
+Instructions to Launch the CCHSS Survey Web Page:
+
+1. Upload the entire "CCHSS-Survey" folder to GitHub, CodePen, or your web server.
+2. Open "index.html" in a browser to view the survey.
+3. Responses are currently logged to the console.
+   - To store responses, connect the form to a backend or Google Sheets API.
+4. Branching logic automatically shows follow-up questions when necessary.
