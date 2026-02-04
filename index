@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CCHSS Compliance Survey</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>CCHSS Compliance Survey</h1>
+<p style="text-align:center;">This survey assesses compliance with the Continuing Care Health Service Standards.</p>
+
+<form id="cchssForm">
+  <!-- Section 1: Respondent Info -->
+  <section>
+    <h2>Section 1: Respondent Information</h2>
+    <label for="fullname">Full Name *</label>
+    <input type="text" id="fullname" name="fullname" required>
+    <label for="role">Role / Position *</label>
+    <select id="role" name="role" required>
+      <option value="">Select role...</option>
+      <option value="Nurse">Nurse</option>
+      <option value="Allied Health Professional">Allied Health Professional</option>
+      <option value="Manager / Supervisor">Manager / Supervisor</option>
+      <option value="Other">Other</option>
+    </select>
+    <label for="department">Department / Unit</label>
+    <input type="text" id="department" name="department">
+    <label for="submissionDate">Date of Submission *</label>
+    <input type="date" id="submissionDate" name="submissionDate" required>
+  </section>
+
+  <!-- Section 2: Service Delivery -->
+  <section>
+    <h2>Section 2: Standard 1 – Service Delivery</h2>
+    <label>Are care plans reviewed regularly according to patient needs? *</label>
+    <select id="serviceReview" name="serviceReview" required>
+      <option value="">Select an option...</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+      <option value="Partially">Partially / Sometimes</option>
+    </select>
+    <div id="serviceReviewDetailsDiv" class="hidden">
+      <label for="serviceReviewDetails">Please explain why care plans are not fully reviewed and what steps could improve compliance *</label>
+      <textarea id="serviceReviewDetails" name="serviceReviewDetails" rows="4"></textarea>
+    </div>
+  </section>
+
+  <!-- Section 3: Governance -->
+  <section>
+    <h2>Section 3: Standard 2 – Governance and Management</h2>
+    <label>Does your department have a clear governance structure in place? *</label>
+    <select id="governanceStructure" name="governanceStructure" required>
+      <option value="">Select an option...</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+      <option value="Partially">Partially</option>
+    </select>
+    <div id="governanceStructureDetailsDiv" class="hidden">
+      <label for="governanceStructureDetails">Please describe the gaps in governance structure and suggested improvements *</label>
+      <textarea id="governanceStructureDetails" name="governanceStructureDetails" rows="4"></textarea>
+    </div>
+    <label>Are staff aware of policies and procedures related to CCHSS? *</label>
+    <select id="policyAwareness" name="policyAwareness" required>
+      <option value="">Select an option...</option>
+      <option value="Yes">Yes, fully</option>
+      <option value="Somewhat">Somewhat</option>
+      <option value="No">No</option>
+    </select>
+    <div id="policyAwarenessDetailsDiv" class="hidden">
+      <label for="policyAwarenessDetails">Please provide details on areas where staff lack awareness and how this can be addressed *</label>
+      <textarea id="policyAwarenessDetails" name="policyAwarenessDetails" rows="4"></textarea>
+    </div>
+  </section>
+
+  <!-- Section 4: Workforce -->
+  <section>
+    <h2>Section 4: Standard 3 – Workforce</h2>
+    <label>Have staff received training relevant to continuing care standards in the last 12 months? *</label>
+    <select id="trainingReceived" name="trainingReceived" required>
+      <option value="">Select an option...</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+    <div id="trainingNeededDetailsDiv" class="hidden">
+      <label for="trainingNeededDetails">Please describe the training gaps and the support needed *</label>
+      <textarea id="trainingNeededDetails" name="trainingNeededDetails" rows="4"></textarea>
+    </div>
+  </section>
+
+  <!-- Section 5: Health and Safety -->
+  <section>
+    <h2>Section 5: Standard 4 – Health and Safety</h2>
+    <label>Are safety protocols regularly reviewed and followed? *</label>
+    <select id="safetyProtocols" name="safetyProtocols" required>
+      <option value="">Select an option...</option>
+      <option value="Always">Always</option>
+      <option value="Sometimes">Sometimes</option>
+      <option value="Rarely">Rarely / Never</option>
+    </select>
+    <div id="safetyProtocolsDetailsDiv" class="hidden">
+      <label for="safetyProtocolsDetails">Please describe issues with safety protocols and any recent incidents *</label>
+      <textarea id="safetyProtocolsDetails" name="safetyProtocolsDetails" rows="4"></textarea>
+    </div>
+  </section>
+
+  <!-- Section 6: Additional Comments -->
+  <section>
+    <h2>Section 6: Additional Comments</h2>
+    <label for="additionalComments">Any other suggestions or feedback related to CCHSS compliance</label>
+    <textarea id="additionalComments" name="additionalComments" rows="4"></textarea>
+  </section>
+
+  <button type="submit">Submit Survey</button>
+</form>
+
+<script src="script.js"></script>
+
+</body>
+</html>
